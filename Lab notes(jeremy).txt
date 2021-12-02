@@ -146,6 +146,21 @@ https://certbot.eff.org/
 # personal access token
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
+Not sure if needed for GITHUB PERSONAL ACCESS TOKEN.
+but added the following access:
+
+admin:org, admin:org_hook, admin:public_key, admin:repo_hook, notifications, repo, and write:packages
+NOTE: after adding credentials in jenkins, it might throw ERROR. if so, just add the pipeline first
+when creating pipeline:
+
+SCM (select GIT) > Credentials > add 
+Domain: global
+Kind: Username with Password
+Scope: Global
+username: <github-username>
+Treat username as secret: checked
+password: <personal access token>
+
 ## To integrate Jenkins with Github, at the Jenkins Source Code Management section, select 
 Git and enter the Repository URL https://yourPAC@github.com/SIT-ICT3x03/Team...git
 
